@@ -1,38 +1,48 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+body {
+  color: rgba(125, 225, 125, 0.75);
+  font-family: "VT323", monospace;
+  background-color: black;
+  font-size: 25px;
+  text-shadow: 0 0 5px rgba(125, 225, 125, 0.5), 0 0 15px rgba(125, 250, 125, 1);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.ScreenPulse {
+  animation: ScreenEffect 0.05s ease infinite;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.Pulse {
+  animation: Pulse 1.5s ease infinite;
+}
+
+.borderColor {
+  border-color: rgba(125, 225, 125, 0.75);
+}
+
+.greenShadow {
+  backdrop-filter: 0 0 15px rgba(125, 250, 125, 1);
+}
+
+@keyframes ScreenEffect {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes Pulse {
+  0% {
+    opacity: 0;
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
